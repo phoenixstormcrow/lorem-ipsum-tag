@@ -1,7 +1,7 @@
 {
   "name": "lorem-ipsum-tag",
-  "version": "0.0.0",
-  "description": "A custom html element that generates lorem ipsum.",
+  "version": "1.0.0",
+  "description": "Stop cluttering up your markup.",
   "main": "index.js",
   "dependencies": {
     "lorem-ipsum": "^1.0.1"
@@ -13,7 +13,6 @@
   },
   "scripts": {
     "lint": "jshint index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "browserify index.js -o lorem-ipsum.js && cp lorem-ipsum.js component/",
     "watch": "watchify index.js -o component/lorem-ipsum.js -v -d",
     "demo": "serve -p 1338 . & opener http://localhost:1338/demo"
@@ -23,6 +22,14 @@
     "lorem",
     "ipsum"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:phoenixstormcrow/lorem-ipsum-tag.git"
+  },
   "author": "K. P. MacGregor <phoenixstormcrow@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/phoenixstormcrow/lorem-ipsum-tag/issues"
+  },
+  "homepage": "https://github.com/phoenixstormcrow/lorem-ipsum-tag"
 }
