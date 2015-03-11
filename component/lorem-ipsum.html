@@ -1,0 +1,22 @@
+<!-- lorem-ipsum.html -->
+
+<style>
+lorem-ipsum {
+  display: inline;
+}
+
+lorem-ipsum[units='paragraphs'], lorem-ipsum[units='paragraph'] {
+  display: block;
+}
+</style>
+
+
+<!-- template and shadow dom are sort of overkill
+     for this, but I plan to allow user-defined templates
+     in a future release
+-->
+<template id='lorem-ipsum-template'>
+  <content></content>
+</template>
+
+<script src='lorem-ipsum.js'></script>
