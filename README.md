@@ -17,7 +17,7 @@ Stop cluttering up your markup.
 
 The text is generated with [knicklabs](https://github.com/knicklabs) [lorem-ipsum module](https://github.com/knicklabs/lorem-ipsum.js), and rendered inside a `<lorem-ipsum>` tag.
 
-## attributes
+## <a name='attributes'></a>attributes
 
 `units=<'word' | 'sentence' | 'paragraph'>`
   Whether to render words, sentences, or paragraphs.
@@ -31,6 +31,6 @@ The text is generated with [knicklabs](https://github.com/knicklabs) [lorem-ipsu
 ## methods
 
 `.render()`
-  Asynchronously generates the text using the default generator in the [lorem-ipsum module](https://github.com/knicklabs/lorem-ipsum.js), and renders it within the `lorem-ipsum` element. Defaults not currently specified above under [attributes](attributes) are as described in the documentation for that module. Multiple calls to `.render()` may be made before the text is actually rendered; the attributes of the element at the time of the most recent call determine the final rendering. Uncomment the lines indicated in the screenshot below to test this for yourself:
+  Asynchronously generates the text using the default generator in the [lorem-ipsum module](https://github.com/knicklabs/lorem-ipsum.js), and renders it within the `lorem-ipsum` element. Defaults not currently specified above under [attributes](#attributes) are as described in the documentation for that module. Multiple calls to `.render()` may be made before the text is actually rendered; the attributes of the element at the time of the most recent call determine the final rendering. Uncomment the lines indicated in the screenshot below to test this for yourself:
 
   ![perf.png](https://raw.githubusercontent.com/phoenixstormcrow/lorem-ipsum-tag/master/perf.png)
