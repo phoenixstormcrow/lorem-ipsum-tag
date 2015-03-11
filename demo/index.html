@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='utf-8'>
+<title>lorem-ipsum web component demo</title>
+<!--polyfill-->
+<script src='../node_modules/webcomponents.js/webcomponents.min.js'></script>
+<link rel='import' href='../component/lorem-ipsum.html'>
+</head>
+<body>
+<form>
+<label for='count'>count:</label>
+<input type='number' id='count' min=0 value=1>
+<label for='unit'>unit:</label>
+<select id='units'>
+  <option value='word'>word</option>
+  <option value='sentence'>sentence</option>
+  <option value='paragraph' selected>paragraph</option>
+</select>
+<label for='format'>format:</label>
+<select id='format'>
+  <option value='html' selected>html</option>
+  <option value='text'>text</option>
+</select>
+<button id='update'>update</button>
+</form>
+<hr>
+<lorem-ipsum></lorem-ipsum>
+<script>
+(function () {
+var lipsum = document.querySelector('lorem-ipsum'),
+    form = document.forms[0];
+
+form.addEventListener('submit', function (evt) {
+  evt.preventDefault();
+  ['count', 'units', 'format'].forEach(function (attr) {
+    lipsum.setAttribute(attr, form[attr].value);
+  });
+});
+})();
+</script>
+</body>
+</html>

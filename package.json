@@ -1,0 +1,28 @@
+{
+  "name": "lorem-ipsum-tag",
+  "version": "0.0.0",
+  "description": "A custom html element that generates lorem ipsum.",
+  "main": "index.js",
+  "dependencies": {
+    "lorem-ipsum": "^1.0.1"
+  },
+  "devDependencies": {
+    "browserify": "^9.0.3",
+    "watchify": "^2.4.0",
+    "webcomponents.js": "^0.5.4-1"
+  },
+  "scripts": {
+    "lint": "jshint index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify index.js -o lorem-ipsum.js && cp lorem-ipsum.js component/",
+    "watch": "watchify index.js -o component/lorem-ipsum.js -v -d",
+    "demo": "serve -p 1338 . & opener http://localhost:1338/demo"
+  },
+  "keywords": [
+    "web-components",
+    "lorem",
+    "ipsum"
+  ],
+  "author": "K. P. MacGregor <phoenixstormcrow@gmail.com>",
+  "license": "MIT"
+}
