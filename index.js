@@ -1,4 +1,4 @@
-/* lorem-ipsum-components
+/* lorem-ipsum-tag
 
    a custom html element that generates lorem ipsum.
 */
@@ -27,25 +27,26 @@ Object.keys(defaults).forEach(function (prop) {
   });
 });
 
-/* expose a render() method
-   Renders the lipsum asynchronously,
-   in case attribute changes can be batched.
-   (casual testing suggests they can't.)
-   Not sure why one might call setAttribute
-   a million times a second, but they might.
+/* .render()
+   Generates and renders the text asynchronously.
+   The user can call .setAttribute() or .render()
+   10000 times in a loop, but we're only going to actually
+   generate and render once. See perf.png for demo.
 */
 loremProto.render = function () {
+//  console.log('render');
   if (this._t !== null) {
-    clearTimeout(this._req);
+    clearTimeout(this._t);
   }
-  this._t = setTimeout( (function () {
+  this._t = setTimeout( function () {
+//    console.log('rendering');
     this.root.innerHTML = generate({
       count: this.count,
       units: this.units,
       format: this.format
     });
     this._t = null;
-  }).bind(this), 0 );
+  }.bind(this), 0 );
 };
 
 loremProto.createdCallback = function () {

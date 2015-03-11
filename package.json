@@ -12,8 +12,9 @@
     "webcomponents.js": "^0.5.4-1"
   },
   "scripts": {
+    "lint": "jshint index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "browserify index.js -o component/lorem-ipsum.js",
+    "build": "browserify index.js -o lorem-ipsum.js && cp lorem-ipsum.js component/",
     "watch": "watchify index.js -o component/lorem-ipsum.js -v -d",
     "demo": "serve -p 1338 . & opener http://localhost:1338/demo"
   },
