@@ -45,3 +45,5 @@ The text is generated with [knicklabs](https://github.com/knicklabs) [lorem-ipsu
   ![perf.png](https://raw.githubusercontent.com/phoenixstormcrow/lorem-ipsum-tag/master/perf.png)
 
 ## demo
+
+[http://phoenixstormcrow.github.io/lorem-ipsum-tag/](http://phoenixstormcrow.github.io/lorem-ipsum-tag/)
